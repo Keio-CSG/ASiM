@@ -43,7 +43,7 @@ ASiM can be run with various devices and an estimation of running time (w/ full 
 | RTX4080-Laptop (12G)  | 1024       | CIFAR-10 | ResNet-18 (W4A4) | 230          |
 | RTX4080-Laptop (12G)  | 256        | ImageNet | ResNet-18 (W6A6) | 6645         |
 | A6000 (48G)           | 512        | ImageNet | ResNet-18 (W6A6) | 4049         |
-| A6000 (48G)           | 1024       | ImageNet | ViT-B-32 (W8A8)  | TODO         |
+| A6000 (48G)           | 1024       | ImageNet | ViT-B-32 (W8A8)  | 19841        |
 
 ## 4. ASiM
 
