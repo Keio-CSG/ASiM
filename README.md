@@ -51,7 +51,7 @@ ASiM can be run with various devices and an estimation of running time (w/ full 
 
 <a href="TODO" target="_blank">Paper Link</a>
 
-TODO
+SRAM-based Analog Compute-in-Memory (ACiM) demonstrates promising energy efficiency for deep neural network (DNN) processing. Although recent aggressive design strategies have led to successive improvements on efficiency, there is limited discussion regarding the accompanying inference accuracy challenges. Given the growing difficulty in validating ACiM circuits with full-scale DNNs, standardized modeling methodology and open-source inference simulator are urgently needed. This paper presents ASiM, a simulation framework specifically designed to assess inference quality, enabling comparisons of ACiM prototype chips and guiding design decisions. ASiM works as a plug-and-play tool that integrates seamlessly with the PyTorch ecosystem, offering speed and ease of use. Using ASiM, we conducted a comprehensive analysis of how various design factors impact DNN inference. We observed that activation encoding can tolerate certain levels of quantization noise, indicating a substantial potential for bit-parallel scheme to enhance energy efficiency. However, inference accuracy is susceptible to noise, as ACiM circuits typically use limited ADC dynamic range, making even small errors down to 1 LSB significantly deteriorates accuracy. This underscores the need for high design standards, especially for complex DNN models and challenging tasks. In response to these findings, we propose two solutions: Hybrid Compute-in-Memory architecture and majority voting to secure accurate computation of MSB cycles. These approaches improve inference quality while maintaining ACiM’s energy efficiency benefits, offering promising pathways toward reliable ACiM deployment in real-world applications.
 
 ### 4.2. Mode Setting for ASiM Modules
 Users can import and replace ASiM modules with default nn.Module into their own DNN models. ASiM modules have additional arguments in module initialization, and all configurable arguments are extracted into `config.py` within this framework. The meaning of each argument can be found in this configuration file. ASiM have two main modes in general use: **Train** and **Simulation**, for model training/fine-tuning and running bit-wise simulation.
@@ -153,9 +153,9 @@ Here, a pretrained model weight must be given as `cfg.pretrain_model_path = 'mod
 If you find this repo is useful, please cite our paper. Thanks.
 
 ```bibtex
-@article{TODO,
-  title={TODO},
+@article{ASiM,
+  title={ASiM: Improving Transparency of SRAM-based Analog Compute-in-Memory Research with an Open-Source Simulation Framework},
   author={Zhang, Wenlun and Ando, Shimpei and Chen, Yung-Chin and Yoshioka, Kentaro},
-  journal={TODO},
+  journal={arXiv},
   year={2024}
 }
