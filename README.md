@@ -141,12 +141,12 @@ Here, a pretrained model weight must be given as `cfg.pretrain_model_path = 'mod
 
 ### 4.3. Download Our Post-NAT-Models
 
-| File Name                                | Dataset  | Model            | Link                                                                                                                                                                                |
-|------------------------------------------|----------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| resnet18_cifar10_w8a8_pact_trim_100.pkl  | CIFAR-10 | ResNet-18 (W8A8) | <a href="https://www.dropbox.com/scl/fi/qjs2fq6synk38j3h8drd1/resnet18_cifar10_w8a8_pact_trim_100.pkl?rlkey=jemaxi7qhd67rpqgqn2bkfkhs&st=wk17npsf&dl=0" target="_blank">Dropbox</a> |
-| resnet18_imagenet_w8a8_pact_trim_50.pkl  | ImageNet | ResNet-18 (W8A8) | <a href="https://www.dropbox.com/scl/fi/4vuwh9ihlclj1vqhk99fg/resnet18_imagenet_w8a8_pact_trim_50.pkl?rlkey=erpc3jbo7kdsdjpu2mhkmtcea&st=gi9ykhbq&dl=0" target="_blank">Dropbox</a> |
-| vitb32_cifar10_w8a8_trim_60.pkl          | CIFAR-10 | ViT-B-32 (W8A8)  | <a href="https://www.dropbox.com/scl/fi/q25rxnli424b71fh23fmp/vitb32_cifar10_w8a8_trim_60.pkl?rlkey=lhg3t7lk7tw0owbcu655qy3sg&st=7zmant97&dl=0" target="_blank">Dropbox</a>         |
-| vitb32_imagenet_w8a8_trim_40.pkl         | ImageNet | ViT-B-32 (W8A8)  | <a href="https://www.dropbox.com/scl/fi/ars6r7qr7ba736clmxl4x/vitb32_imagenet_w8a8_trim_40.pkl?rlkey=xfbopdu3a6mzgo5hz4abmkix3&st=ztobzv49&dl=0" target="_blank">Dropbox</a>        |
+| File Name                                | Dataset  | Model            | Link                                                                                                                                     |
+|------------------------------------------|----------|------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| resnet18_cifar10_w8a8_pact_trim_100.pkl  | CIFAR-10 | ResNet-18 (W8A8) | <a href="https://drive.google.com/file/d/1FoVjgLTTTZhFwD7plXZv1eWMHZzpEa-p/view?usp=drive_link" target="_blank">Google Drive</a>         |
+| resnet18_imagenet_w8a8_pact_trim_50.pkl  | ImageNet | ResNet-18 (W8A8) | <a href="https://drive.google.com/file/d/1G42fgOUXJejV0f6rDMj2k3gDq1r7b3Z0/view?usp=drive_link" target="_blank">Google Drive</a>         |
+| vitb32_cifar10_w8a8_trim_60.pkl          | CIFAR-10 | ViT-B-32 (W8A8)  | <a href="https://drive.google.com/file/d/1uypqLxoZA0hBX-UUOpk1-HsPAb3GDUqJ/view?usp=drive_link" target="_blank">Google Drive</a>         |
+| vitb32_imagenet_w8a8_trim_40.pkl         | ImageNet | ViT-B-32 (W8A8)  | <a href="https://drive.google.com/file/d/1-3togKT0lIMjk4Bhsb5jO_DoqaNbUhGI/view?usp=drive_link" target="_blank">Google Drive</a>         |
 
 ## Citation
 
