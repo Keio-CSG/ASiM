@@ -166,7 +166,6 @@ CIFAR-10:
 |-- CIFAR10
 |   |-- train
 |   |-- test
-|   |-- labels.txt
 ```
 
 CIFAR-100:
