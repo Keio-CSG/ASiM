@@ -236,6 +236,22 @@ After the above configuration settings, just run `./main/src_train.py` for model
 
 Kindly remind that training conditions such as epoch/learning rate may need to be configured case by case (`cfg.max_epoch` and `cfg.lr_init`). A `run` directory will be generated when the training is finished that containing all training log and model weights.
 
+## 6. Model Extension
+
+As ACiM technology rapidly evolves, novel designs continue to enhance area efficiency, energy efficiency, and throughput. Although ASiM is primarily developed for charge domain SRAM ACiM, we encourage users to extend the model by tailoring the code in ASiM modules to reflect their novel circuit designs, ensuring alignment with their specific hardware characteristics. Here, we give two additional examples using ASiM as baseline to show the model's flexibility.
+
+### 6.1. Full Weight Bit-Parallel
+
+By adjusting the order of ideal MAC computing and noise injection & ADC quantization, the ASiM can be extended to further support weight bit-parallel scheme, which is a more aggressive strategy to boost energy efficiency. The implementation example of an full bit-parallel 4b/4b CNN can be found in `./extensions/w4a4_weight_full_bit_parallel`.
+
+### 6.2. Current Domain SRAM ACiM
+
+For current domain SRAM ACiM, replacing capacitance mismatch based non-linearity model with gain compression can effectively capture the non-linearity introduced by current roll-off when transistors transition from saturation to the triode region. 
+
+MAC_REAL = MAC_IDEAL / (1 + Alpha * MAC_IDEAL)
+
+Here, MAC_IDEAL represents the ideal MAC value, while MAC_REAL denotes the actual computed value. In current domain SRAM ACiM, the discharge current of the bit-line or sampling capacitor depends on the number of active transistors where the local dot product is ‘1’. When a large number of cell transistors simultaneously discharge the bit-line or capacitor, the rapid drop in Vds shifts the operation into the triode region, leading to current roll-off and introducing non-linearity into MAC computation. To replicate this behavior in simulations, we introduce an empirical parameter Alpha to align the non-linearity. By calibrating Alpha, the real MAC value remains nearly unchanged for small MAC values, while for larger MAC values, the real MAC output decreases due to gain compression effects. Additionally, incorporating random transistor variations into binary weight tensors allows ASiM to accurately model current domain computations. The implementation example of current domain SRAM ACIM in CNN can be found in `./extensions/current_domain`.
+
 ## Citation
 
 If you find this repo is useful, please cite our paper. Thanks.
@@ -247,3 +263,4 @@ If you find this repo is useful, please cite our paper. Thanks.
   journal={arXiv:2411.11022},
   year={2024}
 }
+```
