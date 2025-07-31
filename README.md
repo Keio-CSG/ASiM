@@ -242,7 +242,7 @@ As ACiM technology rapidly evolves, novel designs continue to enhance area effic
 
 ### 6.1. RRAM Crossbar
 
-In the case of RRAM, where the crossbar cells encode multi-bit weights directly, the loop over binary weight bits in the original simulation algorithm is unnecessary and can be omitted. Additionally, RRAM circuits are primarily affected by conductance variation, making the original capacitor nonlinearity model for SRAM-based ACiM unsuitable. Instead, we model conductance drift as a random perturbation characterized by a percentage-based standard deviation. With these minor adjustments, the ASiM framework can effectively simulate RRAM-based architectures with satisfactory accuracy.
+In the case of RRAM, where the crossbar cells encode multi-bit weights directly, the loop over binary weight bits in the original simulation algorithm is unnecessary and can be omitted. Additionally, RRAM circuits are primarily affected by conductance variation, making the original capacitor nonlinearity model for SRAM-based ACiM unsuitable. Instead, we model conductance drift as a random perturbation characterized by a percentage-based standard deviation. With these minor adjustments, the ASiM framework can effectively simulate RRAM-based architectures with satisfactory accuracy. The implementation example of RRAM crossbar ACIM can be found in `./extensions/rram`.
 
 ### 6.2. Full Weight Bit-Parallel
 
