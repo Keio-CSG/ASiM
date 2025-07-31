@@ -240,11 +240,15 @@ Kindly remind that training conditions such as epoch/learning rate may need to b
 
 As ACiM technology rapidly evolves, novel designs continue to enhance area efficiency, energy efficiency, and throughput. Although ASiM is primarily developed for charge domain SRAM ACiM, we encourage users to extend the model by tailoring the code in ASiM modules to reflect their novel circuit designs, ensuring alignment with their specific hardware characteristics. Here, we give two additional examples using ASiM as baseline to show the model's flexibility.
 
-### 6.1. Full Weight Bit-Parallel
+### 6.1. RRAM Crossbar
+
+In the case of RRAM, where the crossbar cells encode multi-bit weights directly, the loop over binary weight bits in the original simulation algorithm is unnecessary and can be omitted. Additionally, RRAM circuits are primarily affected by conductance variation, making the original capacitor nonlinearity model for SRAM-based ACiM unsuitable. Instead, we model conductance drift as a random perturbation characterized by a percentage-based standard deviation. With these minor adjustments, the ASiM framework can effectively simulate RRAM-based architectures with satisfactory accuracy.
+
+### 6.2. Full Weight Bit-Parallel
 
 By adjusting the order of ideal MAC computing and noise injection & ADC quantization, the ASiM can be extended to further support weight bit-parallel scheme, which is a more aggressive strategy to boost energy efficiency. The implementation example of an full bit-parallel 4b/4b CNN can be found in `./extensions/w4a4_weight_full_bit_parallel`.
 
-### 6.2. Current Domain SRAM ACiM
+### 6.3. Current Domain SRAM ACiM
 
 For current domain SRAM ACiM, replacing capacitance mismatch based non-linearity model with gain compression can effectively capture the non-linearity introduced by current roll-off when transistors transition from saturation to the triode region. 
 
