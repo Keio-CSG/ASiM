@@ -261,10 +261,13 @@ Here, MAC_IDEAL represents the ideal MAC value, while MAC_REAL denotes the actua
 If you find this repo is useful, please cite our paper. Thanks.
 
 ```bibtex
-@article{ASiM,
-  title={ASiM: Improving Transparency of SRAM-based Analog Compute-in-Memory Research with an Open-Source Simulation Framework},
+@article{zhang2025asim,
+  title={ASiM: Modeling and Analyzing Inference Accuracy of SRAM-Based Analog CiM Circuits},
   author={Zhang, Wenlun and Ando, Shimpei and Chen, Yung-Chin and Yoshioka, Kentaro},
-  journal={arXiv:2411.11022},
-  year={2024}
+  journal={IEEE Transactions on Very Large Scale Integration (VLSI) Systems},
+  number={01},
+  pages={1--14},
+  year={2025},
+  publisher={IEEE Computer Society}
 }
 ```
